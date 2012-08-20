@@ -1,0 +1,157 @@
+<html>
+<style>
+	html{
+	  overflow: auto; 
+	  height: 100%; 
+	  background: #FFCC00;
+	}
+	body{
+	  height: 80%; 
+	  width: 800px; 
+	  line-height: 20px;
+	  margin: 100px auto; 
+	  background: #FFCC00;
+	}
+	#content{
+	  overflow: auto; 
+	  height: 80%; 
+	  width: 700px auto; 
+	  background: #FFFFFF;
+	  border-radius: 30px;
+	}
+	.link {
+	  text-decoration: none; 
+	  color: #fdf6e3;
+	}
+	.link:visited {
+	  text-decoration: none; 
+	  color: #fdf6e3;
+	}
+	.link:active {
+	  text-decoration: none; 
+	  color: #fdf6e3;
+	}
+	.link:hover {
+	  font-size: 35px; 
+	  font-weight:bold; 
+	  color: #FFFFFF;
+	}
+
+	.june_pic{
+		background-image:url('june.jpeg');
+		height:241px;
+		width: 400px;
+	}
+	#content{
+		background: #FFCC00;
+		overflow: auto;
+	}
+	#home_partial{
+		background: #FFCC00;
+	  	overflow: hidden;
+	  	margin: 10% auto;
+	  	text-align: center;
+	}
+    #home_partial p{
+		color: #eee8d5;
+		font-size: 40px;
+	  	line-height: 0;
+	}
+	#about_me_partial{
+		margin: 40px;
+	  	display:none;
+	}
+	#contact_partial{
+		margin: 10% 0 20%;
+		display:none;
+	}
+	#portfolio_partial{
+		margin: 10% 0 20%;
+		display:none;
+	}
+	.header_links{
+		text-align: center;
+		font-family: monospace;
+	  	font-weight: bold;
+	  	font-size: 30px;
+		width: 100%;
+		height: 35px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	p{
+		font-family: monospace;
+		font-size: 20px;
+		color: #002b36;
+	}
+	.greeting{
+		font-family: monospace;
+		font-size: 20px;
+		color: #002b36;
+	}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+
+<script>
+	$(document).ready(function() {
+		$('.link').click(function(e){
+			var desired_location = $(this).attr('id');
+			$('#' + desired_location + '_partial').siblings().css('display', 'none');
+			$('#' + desired_location + '_partial').css('display', 'block');
+		});
+	});
+
+
+</script>
+
+  <body>	
+ 	<div class="header_links">
+ 		<span id="home" class="link">
+ 			Home
+ 		</span>&nbsp
+ 		<span id="about_me" class="link">
+ 			About me
+ 		</span>&nbsp
+ 		<span id="portfolio" class="link">
+ 			Portfolio 
+ 		</span>&nbsp
+ 		<span id="contact" class="link">
+ 			Contact 
+ 		</span>
+ 	</div>
+	<div id="content">
+		<div id="home_partial" class="content_partial">
+			<div class="greeting">
+				Hello, I'm June.<br>
+				I can help with Ruby, Rails, Javascript, <br>
+				and general webby type stuff.
+			</div>
+				<p>Buy Me!</p>
+
+		</div>
+		<div id="about_me_partial" class="content_partial" display="none">
+			<center><img src="june.jpeg"/></a></center>
+			<p><b>Bio</b>: I have had two passions in my life: travel and engineering. Growing up in South Korea, I worked hard and broke gender norms by studying Engineering. I then moved to England for more than a year to study English and learn about other cultures. While there, I visited Newcastle, London, Amsterdam, Portugal, Spain, and walked the famous Camino de Santiago. I then moved to San Francisco to expand my horizons further and be a part of the exciting tech scene. In my free time, I like to build things (I built my own lofted bed), make Korean food (I make amazing Deokboki), swim, and of course code. I have enjoyed Dev Bootcamp more than any other learning experience in my life and am really looking forward to finding a workplace where I can extend the learning that I have done here.<p>
+<b>Pre-Bootcamp CS experience</b>: Ever since Middle school, I have been writing simple websites using HTML and CSS, but I had not earnestly started learning to program until I came to the States in July of 2011. I took a college class on C++ and loved it. To learn more about coding, I went to some meetups and met worked with some people in the industry to study how rails works and how I could make a simple website using it. However, the amount that I learned before bootcamp pales in comparison to how much I have learned at Bootcamp. I feel lucky to have some theory from the work I had done before Bootcamp in which to couch what I have learned here.</p>
+		</div>
+		<div id="portfolio_partial" class="content_partial" display="none">
+			<center>
+				<a target="_blank" href="http://gitparty.net">
+				<img src="gitparty.jpg"/></a>
+				<p><b>gitparty.net</b></p>
+				<p>facilitates open source contribution through github</p>
+			</center>
+			<p></p>
+		</div>
+		<div id="contact_partial" class="content_partial" display="none">
+			<center>
+			    <p>Email : jeongjueun@gmail.com</p>
+				<p>Phone : 415.596.4203</p>
+				<p>Linkedin : http://www.linkedin.com/pub/ju-eun-jung/54/7b8/ba9</p>
+	     	</center>
+		</div>
+	</div>
+  </body>
+</html>
